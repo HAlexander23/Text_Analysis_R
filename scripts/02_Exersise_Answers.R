@@ -1,34 +1,5 @@
 
-
 ### Exercise 2.1
-
-# 1. Using the fruits vector above, select fruits that start with 'a' or 'b'
-library(stringr)
-fruit <- c("apple", "orange", "banana", "kiwi")
-str_subset(fruit, pattern = "^[ab]")
-
-# 2. How would you select a fruit with six letters?
-str_subset(fruit, pattern = "[a-z]{6}")
-  
-# 3. Clean the string "abcd2ef7gh9ij2klmn98op" to keep only the numeric characters
-str_replace_all("abcd2ef7gh9ij2klmn98op", pattern = "[a-z]", replacement = "")
-
-# 4. Think about how you could apply this to search a text for phone numbers, 
-      # emails or similarly coded text? 
-text <- c("example.email@gmail.com", "07719 377 390", "User123", "SN14 0GB")
-
-str_subset(text, pattern = "\U0040")
-str_subset(text, pattern = "@")
-
-str_subset(text, pattern = "[0-9]{5} [0-9]{3} [0-9]{3}")
-str_subset(text, pattern = "[A-Za-z]=[0-9]{3}")
-str_subset(text, pattern = "[A-Z]\\d+ \\d+[A-Z]+")
-
-
-
-
-
-### Exercise 2.2
 
 # 1. Extract the “Treasure Island” text from the **gutenbergr** public library
 #     and tidy the book into the tidy one-token-per-row structure
@@ -69,7 +40,7 @@ tidyTreasureIsland %>%
 
 
 
-### Exercise 2.3
+### Exercise 2.2
 
 # 1. Tokenize the Treasure Island data into word triplets (trigrams)
 TreasureIsland <- gutenberg_download(120)
